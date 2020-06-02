@@ -1,0 +1,45 @@
+from selenium import webdriver
+import pyautogui
+from time import sleep
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_extension(r"C:\Users\gkush\Downloads\ad.crx")
+chrome_options.add_extension(r"C:\Users\gkush\Downloads\a.crx")
+username=input("Enter the Tiktok username: ")
+driver = webdriver.Chrome(r"C:\Python\chromedriver.exe", options=chrome_options)
+driver.set_window_size(560,720)
+driver.get(f'https://www.tiktok.com/{username}')
+sleep(2)
+pyautogui.click(422,70)
+sleep(2)
+pyautogui.click(253,379)
+sleep(2)
+pyautogui.click(169,37)
+
+    
+sleep(2)
+# pyautogui.displayMousePosition()
+pyautogui.click(461,67)
+sleep(1)
+pyautogui.click(200,135)
+sleep(1)
+pyautogui.click(234,289)
+sleep(1)
+pyautogui.click(11,269)
+sleep(1)
+pyautogui.click(104,73)
+sleep(4)
+pyautogui.click(499,681)
+
+driver.find_element_by_xpath('//*[@id="main"]/div[2]/div/button').click()
+sleep(3)
+driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[2]/span').click()
+sleep(4)
+driver.find_element_by_xpath('//*[@id="main"]/div/div/div[1]/div[3]/div/li[1]/a').click()
+sleep(2)
+for i in range(1,100):
+    pyautogui.click(104,73)
+    sleep(2)
+    driver.find_element_by_xpath('//*[@id="main"]/div/div/div[1]/div[3]/div/li[1]/a').click()
+    # driver.find_element_by_xpath('//*[@id="main"]/div[2]/div/div[1]/div/div[1]/div[3]/span').click()
+    sleep(16)
