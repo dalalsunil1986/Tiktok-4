@@ -18,6 +18,10 @@ git clone https://github.com/heykush/Tiktok
  pip install time
 ~~~
 
+***You need to download [ChromeDriver](https://chromedriver.chromium.org/downloads) here.***
+*To give the path in webdriver*
+
+
 
 
 
